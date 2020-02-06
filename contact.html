@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- My CSS. -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Contact Page - Sam Wardell</title>
+  </head>
+<body>
+          <!-- This "contentThatIsntTheFooter" thing is needed for the sticky footer. -->
+          <div id="contentThatIsntTheFooter">
+  
+<div id="header">
+
+  <div id="MyName">Sam Wardell</div>
+ 
+ <ul class="nav nav-pills justify-content-end" id="navbar">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./portfolio.html">Portfolio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+  </li>
+ </ul> 
+
+</div>
+ <!-- a box which is far back in the Z axis to move it to the back, and basically extend the Header all the way left and right to keep the colors consistant. -->
+<div id="headerExtender"></div>
+
+
+<div id="bodyBox">
+    <!-- yeah, I know the id still says "aboutMe" but this text needs to get stylized exactly the same as the about me title, so obviously I left it. -->
+    <div id="aboutMeTitle">Contact</div><br>
+
+    <form>
+        <div class="form-group">
+            <label for="exampleInputName1">Name</label>
+            <input type="name" class="form-control" id="exampleInputName1" placeholder="Name">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email here">
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="messageInputBox">Message</label>
+            <textarea class="form-control" id="messageInputBox" placeholder="Ender your message here." rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="thanksForSubmitting()">Submit</button>
+      </form>
+
+</div>
+</div>
+
+<!-- This next snippit of code is to make the sticky footer. -->
+         
+          </div> <!--  Reminder, this is the /div for the id="contentThatIsntTheFooter" at the very very top of this <body> -->
+              <div id="push"></div>
+          <footer id="footer">
+            <div id="footerSpacer"></div>  
+            Copyright 2019</footer> <!-- Do I even need to add this guys? -->
+          
+
+    <!-- Optional JavaScript regarding  -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
