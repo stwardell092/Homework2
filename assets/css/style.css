@@ -46,10 +46,11 @@ body {
 #navbar {
    float: right;
    height: 90px;
-   padding-top: 37px;
+   padding-top: 28px;
    padding-bottom: 37px;
-   font-size: large;
+   font-size: larger;
    z-index: 1;
+   justify-content: end;
    
    /* I can't figure out how to get those tiny lines in between the nav bar items... the commented junk below was my last attempt at doing so. -sam. */
    /* border-left-color: #b4b4b4;
@@ -137,16 +138,14 @@ body {
     font-weight: 600;
     /* Hey TA's! I got a question for ya:  I don't know why but the text weight doesn't change one little bit when I use 100-500, then becomes normal bold from 600-800, and then extra bold on 900.  (same sorta results if I use the "normal, bold, extra bold" options).  From what I can tell on the reference image I have the correct font style and font size, but the font-weight is somewhere between bold and normal.  ...so what gives? Why can't I get anything inbetween no bold and bold? How'd you style the text on the solved version? */
     color: #777777;
+    padding-bottom: 5px;
 }
 
-/* Credit to this article for how I did this footer. https://css-tricks.com/couple-takes-sticky-footer/ */
-/* #contentThatIsntTheFooter { */
-    /* min-height: 100%; */
-
   #push {
-      height: 50px;
+      /* height: 50px;
       width: 100%;
-      visibility: hidden;
+      visibility: hidden; */
+      display: none;
   }
 
   #footer {
@@ -164,7 +163,7 @@ body {
     align-items: flex-end;
     color: #ffffff;
     font-size: 3mm;
-    margin-top: -50px;
+    /* margin-top: -50px; */
   }
 
 /* To get the very small "copyright" text to go to the bottom of the header, I decided to make an invisable box to push it down. */
@@ -224,5 +223,254 @@ body {
     margin: 33px;
     font-size: larger;
     padding-bottom: 30px;
-
 }
+/* ------------------------------------------------------------------------------ */
+
+
+
+
+/* 
+It may sound crazy but for when the screen gets smaller, the more I try to just tweek a few things the worse and worse it gets. So the only way I know how to do this right is to literally go through everything one by one to make sure I get it right.
+*/
+
+
+
+@media screen and (max-width: 1030px) {
+      #contentThatIsntTheFooter {
+        min-height: 700px;
+    }       
+
+div {
+    display: block;
+}
+
+    html {
+        background-image: url(../images/odd\ background\ black\ and\ white\ thingy.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: fixed;
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+        line-height: 1;
+    
+        /* height: 100%; */
+        /* margin: 0; */
+    }
+    #header {
+        background-color: #ffffff;
+        font-family: 'Georgia', Times, 'Times New Roman', serif;
+        border-color: #cccccc;
+        width: 100%;
+        position: relative;
+        left: 0;
+        margin-left: 0px;
+        margin-right: -3.5%;
+        height: 90px;
+        vertical-align: middle;
+        line-height: 1;
+        z-index: 1;
+        
+    }
+    
+    #navbar {
+       float: right;
+       height: 90px;
+       padding-top: 28px;
+       padding-bottom: 37px;
+       padding-right: 4%;
+       font-size: larger;
+       z-index: 1;
+       justify-content: end;
+       
+       /* I can't figure out how to get those tiny lines in between the nav bar items... the commented junk below was my last attempt at doing so. -sam. */
+       /* border-left-color: #b4b4b4;
+       border-left: 3px;
+       margin-right: 6px; */
+    }
+    
+    #MyName {
+        background-color:#4aaaa5;
+        float: left;
+        height: 90px;
+        font-weight: bolder;
+        color: #ffffff;
+        text-align: center;
+        font-size: 32px;
+        padding: 26px;
+        z-index: 1;
+        margin-left: 4.2%
+    }
+    
+    #headerExtender {
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        z-index: 0;
+        height: 95px;
+        width: 100%;
+        /*Message to the TA's: I couldn't see the #cccccc border color so I went with a little darker of a color. */
+        border-bottom: #b4b4b4;
+        border-style: solid;
+        border-bottom-width: 5px;
+        border-top: hidden;
+        border-left: hidden;
+        border-right: hidden;
+        background-color: #ffffff;
+        
+    }
+
+    .nav {
+        padding-right: 7%;
+    }
+
+    #contentThatIsntTheFooter {
+        min-height: calc(100% - 50px);
+    }
+
+    #bodyBox {
+        width: 92%;
+        left: 4.2%;
+        margin-left: 0;
+        position: relative;        
+        height: fit-content;
+        background-color: #ffffff;
+        margin-top: 30px;
+        line-height: 2;
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+        margin-bottom: 76px;
+    }
+    
+    #aboutMeTitle {
+        height: 90px;
+        /* width: 930px; */    
+        font-weight: bolder;
+        color: #4aaaa5;
+        text-align: left;
+        font-size: 32px;
+    }
+       
+    #PortfolioLink1, #PortfolioLink2 { 
+        /* margin: 33px; */
+        margin: 2.5521%;
+        border: none;
+        width: 36.8vw;
+        height: 20.7vw;
+        /* padding-top: 56.25% */
+        /* height: calc(this.width * 0.5625); */
+        /* aspect-ratio: ; */
+    }
+    #PortfolioLink3, #PortfolioLink4 {
+        margin: 2.5521%;
+        border: none;
+        width: 36.8vw;
+        height: 20.7vw;
+        padding-bottom: 10px;
+    }
+
+    form {
+        width: unset;
+    }
+    #push {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    #contentThatIsntTheFooter {
+        min-height: 96.2vw;
+    }
+}
+
+@media screen and (max-width: 665px){
+    #PortfolioLink1, #PortfolioLink2, #PortfolioLink3, #PortfolioLink4 { 
+        margin: 1.8%;
+    }
+/* 
+    #footer {
+        margin-top: 3.7%;
+    } */
+}
+
+
+@media screen and (max-width: 620px){
+
+div {
+    display: block;
+}
+
+html {
+    background-image: url(../images/odd\ background\ black\ and\ white\ thingy.png);
+    /* background-size: 620px, 900px; */
+    background-repeat: repeat-y;
+    background-position: right top;
+    background-attachment: fixed;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    line-height: 1;
+}
+
+#contentThatIsntTheFooter {
+    width: unset;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    /* -webkit-box-flex: unset; */
+    /* height: unset; */
+    min-height: calc(100vh - 50px);
+    }
+
+
+
+#MyName {
+    background-color:#4aaaa5;
+    /* float: left; */
+    height: 70px;
+    width: 100%;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    font-size: 26px;
+    padding: 26px;
+    left: 0;
+    margin: 0px;
+    padding-top: 22px;
+}
+
+#headerExtender {
+    display: none;
+}
+
+#navbar {
+    float: center;
+    height: 60px;
+    width: 100%;
+    padding-top: 9px;
+    padding-bottom: 0px;
+    font-size: larger;
+    z-index: 1;
+    background-color: #ffffff;
+    justify-content: center;
+    border-style: solid;
+    border-color:#b4b4b4;
+    border-width: 0px;
+    border-bottom-width: 5px;
+    padding-right: 0px;
+}
+
+#bodyBox {
+    margin-top: 60px;
+}
+
+#PortfolioLink1, #PortfolioLink2, #PortfolioLink3, #PortfolioLink4 {
+    width: 93%;
+    height: 47.8125%;
+    padding: 0px;
+    border-width: 0px;
+    margin: 3.5%;
+}
+
+#footer {
+    /* margin-top: -3.7%; */
+}
+
+};
