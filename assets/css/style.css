@@ -50,6 +50,7 @@ body {
    padding-bottom: 37px;
    font-size: larger;
    z-index: 1;
+   justify-content: end;
    
    /* I can't figure out how to get those tiny lines in between the nav bar items... the commented junk below was my last attempt at doing so. -sam. */
    /* border-left-color: #b4b4b4;
@@ -137,12 +138,14 @@ body {
     font-weight: 600;
     /* Hey TA's! I got a question for ya:  I don't know why but the text weight doesn't change one little bit when I use 100-500, then becomes normal bold from 600-800, and then extra bold on 900.  (same sorta results if I use the "normal, bold, extra bold" options).  From what I can tell on the reference image I have the correct font style and font size, but the font-weight is somewhere between bold and normal.  ...so what gives? Why can't I get anything inbetween no bold and bold? How'd you style the text on the solved version? */
     color: #777777;
+    padding-bottom: 5px;
 }
 
   #push {
-      height: 50px;
+      /* height: 50px;
       width: 100%;
-      visibility: hidden;
+      visibility: hidden; */
+      display: none;
   }
 
   #footer {
@@ -160,7 +163,7 @@ body {
     align-items: flex-end;
     color: #ffffff;
     font-size: 3mm;
-    margin-top: -50px;
+    /* margin-top: -50px; */
   }
 
 /* To get the very small "copyright" text to go to the bottom of the header, I decided to make an invisable box to push it down. */
@@ -235,7 +238,7 @@ It may sound crazy but for when the screen gets smaller, the more I try to just 
 
 @media screen and (max-width: 1030px) {
       #contentThatIsntTheFooter {
-        min-height: unset;
+        min-height: 700px;
     }       
 
 div {
@@ -278,6 +281,7 @@ div {
        padding-right: 4%;
        font-size: larger;
        z-index: 1;
+       justify-content: end;
        
        /* I can't figure out how to get those tiny lines in between the nav bar items... the commented junk below was my last attempt at doing so. -sam. */
        /* border-left-color: #b4b4b4;
@@ -347,20 +351,47 @@ div {
         font-size: 32px;
     }
        
-    #PortfolioLink1, #PortfolioLink2, #PortfolioLink3, #PortfolioLink4 { 
+    #PortfolioLink1, #PortfolioLink2 { 
         /* margin: 33px; */
-        margin: 3%;
+        margin: 2.5521%;
         border: none;
-        width: 40%;
-        height: unset;
-        aspect-ratio: ;
+        width: 36.8vw;
+        height: 20.7vw;
+        /* padding-top: 56.25% */
+        /* height: calc(this.width * 0.5625); */
+        /* aspect-ratio: ; */
+    }
+    #PortfolioLink3, #PortfolioLink4 {
+        margin: 2.5521%;
+        border: none;
+        width: 36.8vw;
+        height: 20.7vw;
+        padding-bottom: 10px;
     }
 
     form {
         width: unset;
     }
+    #push {
+        display: none;
+    }
 }
 
+@media screen and (max-width: 710px) {
+    #contentThatIsntTheFooter {
+        min-height: 96.2vw;
+    }
+}
+
+@media screen and (max-width: 665px){
+    #PortfolioLink1, #PortfolioLink2, #PortfolioLink3, #PortfolioLink4 { 
+        margin: 1.8%;
+    }
+/* 
+    #footer {
+        margin-top: 3.7%;
+    } */
+}
 
 
 @media screen and (max-width: 620px){
@@ -371,7 +402,7 @@ div {
 
 html {
     background-image: url(../images/odd\ background\ black\ and\ white\ thingy.png);
-    background-size: 580px, 900px;
+    /* background-size: 620px, 900px; */
     background-repeat: repeat-y;
     background-position: right top;
     background-attachment: fixed;
@@ -380,11 +411,13 @@ html {
 }
 
 #contentThatIsntTheFooter {
-    width: 90%;
-    margin: 5%;
-    padding: 5%;
+    width: unset;
+    margin: 0;
+    padding: 0;
     border: 0px;
-    -webkit-box-flex: unset;
+    /* -webkit-box-flex: unset; */
+    /* height: unset; */
+    min-height: calc(100vh - 50px);
     }
 
 
@@ -392,21 +425,53 @@ html {
 #MyName {
     background-color:#4aaaa5;
     /* float: left; */
-    height: 60px;
+    height: 70px;
     width: 100%;
     font-weight: bold;
     color: #ffffff;
     text-align: center;
     font-size: 26px;
     padding: 26px;
-    z-index: 1;
     left: 0;
-
-    
+    margin: 0px;
+    padding-top: 22px;
 }
 
 #headerExtender {
     display: none;
+}
+
+#navbar {
+    float: center;
+    height: 60px;
+    width: 100%;
+    padding-top: 9px;
+    padding-bottom: 0px;
+    font-size: larger;
+    z-index: 1;
+    background-color: #ffffff;
+    justify-content: center;
+    border-style: solid;
+    border-color:#b4b4b4;
+    border-width: 0px;
+    border-bottom-width: 5px;
+    padding-right: 0px;
+}
+
+#bodyBox {
+    margin-top: 60px;
+}
+
+#PortfolioLink1, #PortfolioLink2, #PortfolioLink3, #PortfolioLink4 {
+    width: 93%;
+    height: 47.8125%;
+    padding: 0px;
+    border-width: 0px;
+    margin: 3.5%;
+}
+
+#footer {
+    /* margin-top: -3.7%; */
 }
 
 };
